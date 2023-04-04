@@ -19,7 +19,7 @@ jobs:
         with:
           msystem: ${{matrix.chain}}
           install: make cmake tree
-          pacboy: ${{matrix.cc}}:p hdf5:p boost:p opencv:p
+          pacboy: ${{matrix.cc}}:p hdf5:p boost:p opencv:p jsoncpp:p
       - name: Compile
         run: |
           mkdir build && cd build
