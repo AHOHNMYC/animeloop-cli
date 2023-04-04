@@ -22,7 +22,6 @@ jobs:
           pacboy: ${{matrix.cc}}:p hdf5:p boost:p opencv:p
       - name: Compile
         run: |
-          cd animeloop-cli
           mkdir build && cd build
           cmake -G "Unix Makefiles" ..
           make animeloop-cli
