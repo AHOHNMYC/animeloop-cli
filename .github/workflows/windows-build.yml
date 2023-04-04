@@ -24,7 +24,7 @@ jobs:
         run: |
           cd animeloop-cli
           mkdir build && cd build
-          cmake -G "MinGw Makefiles" ..
+          cmake -G "Unix Makefiles" ..
           make animeloop-cli
       - name: Show result
         run: tree
