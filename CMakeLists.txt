@@ -61,7 +61,7 @@ target_link_libraries(animeloop-cli ${JSONCPP_LIBRARIES})
 include_directories(animeloop-cli /usr/include/jsoncpp)
 
 # OpenCV
-find_package( OpenCV 3.2 REQUIRED )
+find_package( OpenCV REQUIRED )
 target_link_libraries( animeloop-cli ${OpenCV_LIBS} )
 target_link_libraries( similar-and-same ${OpenCV_LIBS})
 target_link_libraries( cuts-switch ${OpenCV_LIBS})
