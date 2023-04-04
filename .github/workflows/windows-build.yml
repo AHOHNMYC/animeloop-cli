@@ -19,11 +19,9 @@ jobs:
         with:
           msystem: ${{matrix.chain}}
           install: make cmake tree
-          pacboy: ${{matrix.cc}}:p hdf5:p
-      - name: Compile .exe
+          pacboy: ${{matrix.cc}}:p hdf5:p boost:p opencv:p
+      - name: Compile
         run: |
-          pacman -U https://mirrors.ustc.edu.cn/msys2/mingw/x86_64/mingw-w64-x86_64-boost-1.64.0-3-any.pkg.tar.xz
-          pacman -U https://mirrors.ustc.edu.cn/msys2/mingw/x86_64/mingw-w64-x86_64-opencv-3.4.3-2-any.pkg.tar.xz
           cd animeloop-cli
           mkdir build && cd build
           cmake -G "MinGw Makefiles" ..
